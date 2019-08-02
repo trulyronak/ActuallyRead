@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		A6653A2722F4670500354E25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6653A2622F4670500354E25 /* AppDelegate.swift */; };
-		A6653A2922F4670500354E25 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6653A2822F4670500354E25 /* ViewController.swift */; };
+		A6653A2922F4670500354E25 /* EnterLinkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6653A2822F4670500354E25 /* EnterLinkVC.swift */; };
 		A6653A2C22F4670500354E25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6653A2A22F4670500354E25 /* Main.storyboard */; };
 		A6653A2E22F4670800354E25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6653A2D22F4670800354E25 /* Assets.xcassets */; };
 		A6653A3122F4670800354E25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6653A2F22F4670800354E25 /* LaunchScreen.storyboard */; };
 		A6653A3C22F4670800354E25 /* ActuallyReadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6653A3B22F4670800354E25 /* ActuallyReadTests.swift */; };
 		A6653A4722F4670800354E25 /* ActuallyReadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6653A4622F4670800354E25 /* ActuallyReadUITests.swift */; };
+		A6653A5722F468BD00354E25 /* ArticleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6653A5622F468BD00354E25 /* ArticleVC.swift */; };
+		A6653A5922F4693700354E25 /* Read.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6653A5822F4693700354E25 /* Read.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,7 @@
 /* Begin PBXFileReference section */
 		A6653A2322F4670500354E25 /* ActuallyRead.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActuallyRead.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6653A2622F4670500354E25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A6653A2822F4670500354E25 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A6653A2822F4670500354E25 /* EnterLinkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterLinkVC.swift; sourceTree = "<group>"; };
 		A6653A2B22F4670500354E25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A6653A2D22F4670800354E25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A6653A3022F4670800354E25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +49,8 @@
 		A6653A4222F4670800354E25 /* ActuallyReadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActuallyReadUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6653A4622F4670800354E25 /* ActuallyReadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActuallyReadUITests.swift; sourceTree = "<group>"; };
 		A6653A4822F4670800354E25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6653A5622F468BD00354E25 /* ArticleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleVC.swift; sourceTree = "<group>"; };
+		A6653A5822F4693700354E25 /* Read.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Read.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +102,13 @@
 			isa = PBXGroup;
 			children = (
 				A6653A2622F4670500354E25 /* AppDelegate.swift */,
-				A6653A2822F4670500354E25 /* ViewController.swift */,
+				A6653A2822F4670500354E25 /* EnterLinkVC.swift */,
 				A6653A2A22F4670500354E25 /* Main.storyboard */,
 				A6653A2D22F4670800354E25 /* Assets.xcassets */,
 				A6653A2F22F4670800354E25 /* LaunchScreen.storyboard */,
 				A6653A3222F4670800354E25 /* Info.plist */,
+				A6653A5622F468BD00354E25 /* ArticleVC.swift */,
+				A6653A5822F4693700354E25 /* Read.swift */,
 			);
 			path = ActuallyRead;
 			sourceTree = "<group>";
@@ -256,7 +262,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6653A2922F4670500354E25 /* ViewController.swift in Sources */,
+				A6653A2922F4670500354E25 /* EnterLinkVC.swift in Sources */,
+				A6653A5922F4693700354E25 /* Read.swift in Sources */,
+				A6653A5722F468BD00354E25 /* ArticleVC.swift in Sources */,
 				A6653A2722F4670500354E25 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
