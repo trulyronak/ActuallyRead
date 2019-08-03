@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftSoup
 
 class EnterLinkVC: UIViewController {
 
@@ -18,16 +19,10 @@ class EnterLinkVC: UIViewController {
 
 
     @IBAction func readArticle(_ sender: UIButton) {
-        sender.setTitle("Reading Article", for: .focused)
-        // do request
-        
-        sender.setTitle("Parsing Article", for: .focused)
-        // do parsing
-        
-        // transition to new vc with content
-        sender.setTitle("Success! Showing Article", for: .normal)
+        let html = read(url: articleLinkTextField.text!)
+    
         let article = self.storyboard?.instantiateViewController(withIdentifier: "ArticleVC") as! ArticleVC
-        article.articleContent = "<h1>Functionality Not Supported :O</h1>"
+        article.articleContent = html
         self.navigationController?.pushViewController(article, animated: true)
     }
 }

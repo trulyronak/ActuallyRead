@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="v7b-z5-onp">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Share Article View Controller-->
+        <scene sceneID="9Ni-l8-haY">
+            <objects>
+                <viewController storyboardIdentifier="ArticleVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="v7b-z5-onp" customClass="ShareArticleViewController" customModule="ParseArticleOnline" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dP8-rL-H9y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Loading Article Title" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Hk3-nq-AS0">
+                                <rect key="frame" x="20" y="49" width="318" height="81"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="81" id="Z7h-fJ-KOC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5nn-AI-GPB">
+                                <rect key="frame" x="20" y="145" width="374" height="717"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="717" id="0Fu-Ye-Le9"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Loading Article Content. If problem persists, we could not load your article content">
+                                        <attributes>
+                                            <color key="NSColor" red="0.20784313730000001" green="0.21960784310000001" blue="0.22352941179999999" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="20" name="Optima-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4z-Fn-Ilm">
+                                <rect key="frame" x="354" y="59" width="34" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="LA9-hu-Mrp"/>
+                                </constraints>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backToWebpage:" destination="v7b-z5-onp" eventType="touchUpInside" id="bvt-nA-V4r"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5nn-AI-GPB" firstAttribute="leading" secondItem="YnQ-g2-VNu" secondAttribute="leading" constant="20" id="23E-iT-u6X"/>
+                            <constraint firstItem="Q4z-Fn-Ilm" firstAttribute="top" secondItem="YnQ-g2-VNu" secondAttribute="top" constant="15" id="FtC-QL-pfE"/>
+                            <constraint firstItem="Hk3-nq-AS0" firstAttribute="top" secondItem="YnQ-g2-VNu" secondAttribute="top" constant="5" id="VWC-A7-Hzh"/>
+                            <constraint firstItem="Q4z-Fn-Ilm" firstAttribute="leading" secondItem="Hk3-nq-AS0" secondAttribute="trailing" constant="16" id="a67-WL-P6D"/>
+                            <constraint firstItem="Hk3-nq-AS0" firstAttribute="leading" secondItem="YnQ-g2-VNu" secondAttribute="leading" constant="20" id="cTV-Dc-G0g"/>
+                            <constraint firstItem="YnQ-g2-VNu" firstAttribute="trailing" secondItem="5nn-AI-GPB" secondAttribute="trailing" constant="20" id="m0e-jb-Xow"/>
+                            <constraint firstItem="YnQ-g2-VNu" firstAttribute="trailing" secondItem="Hk3-nq-AS0" secondAttribute="trailing" constant="76" id="m6b-r5-aAa"/>
+                            <constraint firstItem="YnQ-g2-VNu" firstAttribute="trailing" secondItem="Q4z-Fn-Ilm" secondAttribute="trailing" constant="26" id="xcL-nZ-Xmm"/>
+                            <constraint firstItem="5nn-AI-GPB" firstAttribute="top" secondItem="Hk3-nq-AS0" secondAttribute="bottom" constant="15" id="yew-zo-BXl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YnQ-g2-VNu"/>
+                    </view>
+                    <connections>
+                        <outlet property="paragraphView" destination="5nn-AI-GPB" id="865-yA-WsI"/>
+                        <outlet property="titleView" destination="Hk3-nq-AS0" id="J4r-I4-axg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rfI-Ma-nfF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-252.17391304347828" y="16.741071428571427"/>
+        </scene>
+    </scenes>
+</document>

@@ -18,32 +18,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Paste your article link here" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4Eh-19-6Ng">
-                                <rect key="frame" x="111" y="441" width="192" height="30"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7ze-Dt-j11">
+                                <rect key="frame" x="0.0" y="46" width="414" height="835"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rCI-s6-5nC">
+                                        <rect key="frame" x="160" y="8" width="94" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="qs7-kD-Ew5"/>
+                                        </constraints>
+                                        <state key="normal" title="Actually Read"/>
+                                        <connections>
+                                            <action selector="readArticle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UZf-5a-ymP"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Paste your article link here" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4Eh-19-6Ng">
+                                        <rect key="frame" x="30" y="339" width="354" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="FaO-oM-U6E"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="192" id="YSg-Ze-pgd"/>
+                                    <constraint firstItem="4Eh-19-6Ng" firstAttribute="top" secondItem="7ze-Dt-j11" secondAttribute="top" constant="339" id="Qov-rA-Ho3"/>
+                                    <constraint firstAttribute="trailing" secondItem="rCI-s6-5nC" secondAttribute="trailing" constant="160" id="ZBU-VD-C0k"/>
+                                    <constraint firstAttribute="trailing" secondItem="4Eh-19-6Ng" secondAttribute="trailing" constant="30" id="cEg-bi-5V2"/>
+                                    <constraint firstItem="rCI-s6-5nC" firstAttribute="leading" secondItem="7ze-Dt-j11" secondAttribute="leading" constant="160" id="cXJ-z6-8a2"/>
+                                    <constraint firstItem="4Eh-19-6Ng" firstAttribute="leading" secondItem="7ze-Dt-j11" secondAttribute="leading" constant="30" id="d8Q-h7-bRF"/>
+                                    <constraint firstItem="rCI-s6-5nC" firstAttribute="top" secondItem="7ze-Dt-j11" secondAttribute="top" constant="8" id="n80-nn-gEc"/>
                                 </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rCI-s6-5nC">
-                                <rect key="frame" x="160" y="479" width="94" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="94" id="uA9-8F-H8n"/>
-                                </constraints>
-                                <state key="normal" title="Actually Read"/>
-                                <connections>
-                                    <action selector="readArticle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UZf-5a-ymP"/>
-                                </connections>
-                            </button>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="rCI-s6-5nC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2df-rA-nmp"/>
-                            <constraint firstItem="rCI-s6-5nC" firstAttribute="top" secondItem="4Eh-19-6Ng" secondAttribute="bottom" constant="8" id="vV5-co-gKO"/>
-                            <constraint firstItem="4Eh-19-6Ng" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="whx-Yl-atd"/>
-                            <constraint firstItem="4Eh-19-6Ng" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="353" id="xg8-rD-oZM"/>
+                            <constraint firstItem="7ze-Dt-j11" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AeE-t0-OTc"/>
+                            <constraint firstItem="7ze-Dt-j11" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="FuB-Ww-etq"/>
+                            <constraint firstAttribute="bottom" secondItem="7ze-Dt-j11" secondAttribute="bottom" id="I75-8c-hYY"/>
+                            <constraint firstItem="7ze-Dt-j11" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vyr-uf-Jkw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -54,7 +67,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="989.85507246376824" y="126.5625"/>
+            <point key="canvasLocation" x="923" y="127"/>
         </scene>
         <!--ArticleVC-->
         <scene sceneID="fQt-w7-Veq">
@@ -64,26 +77,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1cK-DJ-ZD8">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Article Title Will Go Here, These Are Too Long" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="V2t-mj-LpK">
+                                <rect key="frame" x="20" y="49" width="374" height="81"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="81" id="sot-q9-pEi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="x0B-az-lP8">
+                                <rect key="frame" x="20" y="145" width="374" height="717"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="717" id="b24-L9-VuI"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" red="0.20784313725490194" green="0.2196078431372549" blue="0.22352941176470587" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="mLh-Gn-lZi" firstAttribute="trailing" secondItem="1cK-DJ-ZD8" secondAttribute="trailing" id="d8X-yr-JxW"/>
-                            <constraint firstItem="1cK-DJ-ZD8" firstAttribute="top" secondItem="ZWv-cG-o9g" secondAttribute="top" id="vid-ct-v2R"/>
-                            <constraint firstAttribute="bottom" secondItem="1cK-DJ-ZD8" secondAttribute="bottom" id="vxu-gZ-eVT"/>
-                            <constraint firstItem="1cK-DJ-ZD8" firstAttribute="leading" secondItem="mLh-Gn-lZi" secondAttribute="leading" id="wof-4e-VSQ"/>
+                            <constraint firstItem="x0B-az-lP8" firstAttribute="top" secondItem="V2t-mj-LpK" secondAttribute="bottom" constant="15" id="Akt-Qm-v41"/>
+                            <constraint firstItem="x0B-az-lP8" firstAttribute="leading" secondItem="mLh-Gn-lZi" secondAttribute="leading" constant="20" id="Vdc-Pc-ZLq"/>
+                            <constraint firstItem="mLh-Gn-lZi" firstAttribute="trailing" secondItem="x0B-az-lP8" secondAttribute="trailing" constant="20" id="Wjo-LI-YSf"/>
+                            <constraint firstItem="mLh-Gn-lZi" firstAttribute="trailing" secondItem="V2t-mj-LpK" secondAttribute="trailing" constant="20" id="hPo-GV-lh9"/>
+                            <constraint firstItem="V2t-mj-LpK" firstAttribute="leading" secondItem="mLh-Gn-lZi" secondAttribute="leading" constant="20" id="jDX-Qe-O5I"/>
+                            <constraint firstItem="V2t-mj-LpK" firstAttribute="top" secondItem="mLh-Gn-lZi" secondAttribute="top" constant="5" id="p1v-Io-4GX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mLh-Gn-lZi"/>
                     </view>
                     <connections>
-                        <outlet property="webKitView" destination="1cK-DJ-ZD8" id="p4a-E1-ama"/>
+                        <outlet property="contentView" destination="x0B-az-lP8" id="6yc-ef-fIB"/>
+                        <outlet property="titleView" destination="V2t-mj-LpK" id="kWl-iW-cdQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oEq-ey-BTK" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -7,18 +7,25 @@
 //
 
 import UIKit
-import WebKit
 
 class ArticleVC: UIViewController {
 
-    var articleContent: String = "<h1>Loading</h1>"
+    var articleContent: Article!
     
-    @IBOutlet weak var webKitView: WKWebView!
+    @IBOutlet weak var titleView: UITextView!
+    @IBOutlet weak var contentView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        self.webKitView.loadHTMLString(articleContent, baseURL: URL(string: "https://nytimes.com"))
+        if articleContent != nil {
+            if articleContent.title == "" {
+                articleContent.title = "NY Times Article"
+            }
+            titleView.text = articleContent.title
+            contentView.text = ""
+            for paragraph in articleContent.content {
+                contentView.text += "\(paragraph)\n\n"
+            }
+        }        
     }
     
 
